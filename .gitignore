@@ -1,0 +1,20 @@
+# Go build ouptut
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go dependency directory (if using modules)
+/vendor/
+/pkg/mod/ # Usually cached globally, but good to ignore if vendored locally sometimes
+
+# Log files
+*.log
+
+# Configuration files containing secrets (if any, consider using environment variables instead)
+# config.yaml # Or your specific config file name if it contains secrets
+
+# OS generated files
+.DS_Store
+Thumbs.db 

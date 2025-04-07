@@ -1,0 +1,223 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 标题 */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #222;
+}
+
+/* 表单 */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #0066cc;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0055aa;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: #ddd;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #ccc;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    text-decoration: none;
+}
+
+/* 头部和导航 */
+header {
+    background-color: #0066cc;
+    padding: 1rem 0;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+/* 页脚 */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* 文章卡片 */
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-meta {
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-meta span {
+    margin-right: 1rem;
+}
+
+.post-excerpt {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    font-weight: 600;
+}
+
+/* 主页特定样式 */
+.hero {
+    background-color: #0066cc;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.latest-posts {
+    margin-bottom: 2rem;
+}
+
+/* 文章详情页 */
+.post-detail {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-content {
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+.post-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* 认证表单 */
+.auth-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.auth-links {
+    margin-top: 2rem;
+    text-align: center;
+} 

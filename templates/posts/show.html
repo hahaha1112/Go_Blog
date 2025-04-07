@@ -1,0 +1,29 @@
+{{ define "content" }}
+<article class="post-detail">
+    <header>
+        <h2>{{ .Post.Title }}</h2>
+        <div class="post-meta">
+            <span>作者: {{ .Post.User.Username }}</span>
+            <span>发布于: {{ .Post.CreatedAt.Format "2006-01-02 15:04" }}</span>
+            {{ if ne .Post.CreatedAt .Post.UpdatedAt }}
+                <span>更新于: {{ .Post.UpdatedAt.Format "2006-01-02 15:04" }}</span>
+            {{ end }}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        {{ .Post.Content }}
+    </div>
+    
+    <footer>
+        {{ if .User }}
+            {{ if eq .User.ID .Post.UserID }}
+                <div class="post-actions">
+                    <a href="/posts/edit/{{ .Post.ID }}" class="btn btn-primary">编辑</a>
+                    <a href="/posts/delete/{{ .Post.ID }}" class="btn btn-danger" onclick="return confirm('确定要删除这篇文章吗？')">删除</a>
+                </div>
+            {{ end }}
+        {{ end }}
+    </footer>
+</article>
+{{ end }} 

@@ -1,0 +1,31 @@
+{{ define "content" }}
+<section class="post-list-page">
+    <h2>所有文章</h2>
+    
+    {{ if .Posts }}
+        <div class="post-list">
+            {{ range .Posts }}
+                <div class="post-card">
+                    <h3><a href="/posts/{{ .ID }}">{{ .Title }}</a></h3>
+                    <div class="post-meta">
+                        <span>作者: {{ .User.Username }}</span>
+                        <span>发布于: {{ .CreatedAt.Format "2006-01-02 15:04" }}</span>
+                    </div>
+                    <div class="post-excerpt">
+                        {{ if gt (len .Content) 200 }}
+                            {{ slice .Content 0 200 }}...
+                        {{ else }}
+                            {{ .Content }}
+                        {{ end }}
+                    </div>
+                    <a href="/posts/{{ .ID }}" class="read-more">阅读更多</a>
+                </div>
+            {{ end }}
+        </div>
+    {{ else }}
+        <div class="no-posts">
+            <p>暂无文章，去<a href="/posts/new">创建</a>一篇吧！</p>
+        </div>
+    {{ end }}
+</section>
+{{ end }} 
